@@ -45,7 +45,7 @@ class Order(models.Model):
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    quatity = models.PositiveIntegerField()
+    quantity = models.PositiveIntegerField()
 
     @property
     def item_subtotal(self):
